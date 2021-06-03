@@ -28,7 +28,7 @@ img {
 .search-form {
   display: flex;
   justify-content: center;
-  padding: 8px;
+  // padding: 8px;
   margin-bottom: 24px;
 }
 
@@ -36,18 +36,25 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 40px;
 }
 
 .button.is-hidden {
   display: none;
 }
 
+.button.end {
+  background-color: transparent;
+  color: gray;
+  font-size: 20px;
+}
+
 .btn {
   // display: inline-block;
-  padding: 10px 30px;
+  padding: 5px 10px;
 
   min-width: 200px;
-  min-height: 50px;
+  min-height: 30px;
 
   color: #ffffff;
   background-color: #2196f3;
@@ -84,28 +91,54 @@ img {
   margin-bottom: 30px;
 }
 
-.gallery li {
-  height: 450px;
+.gallery-item {
+  border: 1px solid gray;
+  border-radius: 10px;
+  height: 320px;
   overflow: hidden;
 }
 
 .gallery img {
   display: block;
-  width: 100%;
+  padding: 5px;
+  border-radius: 10px;
+  // width: 100%;
   height: 200px;
   object-fit: cover;
 }
 
-.gallery a {
-  text-decoration: none;
-  color: #2a2a2a;
+.stats {
+  padding: 10px;
 }
 
+.stats-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}
+
+.material-icons {
+  margin-right: 5px;
+  font-size: 14px;
+  color: tomato;
+}
+
+// .stats-item:not(:last-child) {
+//   margin-bottom: 5px;
+// }
+
+// .gallery a {
+//   text-decoration: none;
+//   color: #2a2a2a;
+// }
+
 .form-control {
-  padding: 10px 30px;
+  padding: 5px 10px;
   margin-right: 10px;
   min-width: 200px;
-  min-height: 50px;
+  min-height: 30px;
 
   font-family: inherit;
   font-weight: 500;
@@ -116,4 +149,22 @@ img {
 
 .form-inline {
   margin: 0;
+  padding-top: 20px;
+}
+
+// Toastify
+
+.info {
+  padding: 20px;
+  width: 440px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.info-error {
+  background: linear-gradient(to right, #fd1d1d, #fcb045);
 }

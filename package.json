@@ -39,5 +39,9 @@
         ".png"
       ]
     }
+  },
+  "dependencies": {
+    "lodash.debounce": "^4.0.8",
+    "toastify-js": "^1.11.0"
   }
 }
