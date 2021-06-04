@@ -2,13 +2,12 @@ import photosTpl from './templates/gallery.hbs';
 import PhotoApiService from './js/apiService';
 import LoadMoreBtn from './js/components/load-more-btn';
 import toastify from './js/toastify';
-import './sass/main.scss';
+import './js/components/lightbox';
 
-const refs = {
-  searchForm: document.querySelector('#search-form'),
-  galleryContainer: document.querySelector('.js-gallery-list'),
-  //   input: document.querySelector('#searchQuery'),
-};
+import './sass/main.scss';
+import getRefs from './js/get-refs';
+
+const refs = getRefs();
 
 const loadMoreBtn = new LoadMoreBtn({ selector: '[data-action="load-more"]', hidden: true });
 const photoApiService = new PhotoApiService();
@@ -18,10 +17,9 @@ loadMoreBtn.refs.button.addEventListener('click', fetchPhotos);
 
 function onSearch(e) {
   e.preventDefault();
-
   clearPhotosContainer();
-
   photoApiService.query = e.currentTarget.elements.query.value;
+
   if (!photoApiService.query) {
     return;
   }
@@ -32,7 +30,6 @@ function onSearch(e) {
 
   loadMoreBtn.show();
   photoApiService.resetPage();
-
   fetchPhotos();
 
   e.currentTarget.elements.query.value = '';
@@ -76,3 +73,29 @@ function scroll() {
     block: 'end',
   });
 }
+
+// const onEntry = entries => {
+//   entries.forEach(entry => {
+//     if (entry.isIntersecting && photoApiService.query !== '') {
+//       photoApiService.fetchPhotos().then(photos => {
+//         if (photos.length < 12 && photos.length >= 0) {
+//           loadMoreBtn.showEnd();
+//           return;
+//         }
+
+//         appendPhotosMarkup(photos);
+//         loadMoreBtn.enable();
+
+//         return;
+//       });
+//     }
+//   });
+// };
+
+// const options = {
+//   // rootMargin: '200px',
+// };
+
+// const observer = new IntersectionObserver(onEntry, options);
+
+// observer.observe(refs.sentinel);

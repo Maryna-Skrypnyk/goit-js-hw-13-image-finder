@@ -41,7 +41,7 @@
     }
   },
   "dependencies": {
-    "lodash.debounce": "^4.0.8",
+    "basiclightbox": "^5.0.4",
     "toastify-js": "^1.11.0"
   }
 }

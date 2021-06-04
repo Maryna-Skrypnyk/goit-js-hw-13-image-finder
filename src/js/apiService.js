@@ -9,8 +9,17 @@ export default class PhotoApiService {
   }
 
   fetchPhotos() {
-    // console.log(this);
-    const url = `${BASE_URL}/?image_type=photo&orientation=horizontal&q=${this.searchQuery}&page=${this.page}&per_page=12&key=${API_KEY}`;
+    const searchParams = new URLSearchParams({
+      image_type: 'photo',
+      orientation: 'horizontal',
+      q: this.searchQuery,
+      page: this.page,
+      per_page: 12,
+      key: API_KEY,
+    });
+
+    const url = `${BASE_URL}/?${searchParams}`;
+    // const url = `${BASE_URL}/?image_type=photo&orientation=horizontal&q=${this.searchQuery}&page=${this.page}&per_page=12&key=${API_KEY}`;
 
     return fetch(url)
       .then(response => response.json())
