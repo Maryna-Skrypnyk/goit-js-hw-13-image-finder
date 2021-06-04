@@ -74,6 +74,7 @@ function scroll() {
   });
 }
 
+// Infinite-scroll
 // const onEntry = entries => {
 //   entries.forEach(entry => {
 //     if (entry.isIntersecting && photoApiService.query !== '') {
