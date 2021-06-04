@@ -93,7 +93,7 @@ function scroll() {
 // };
 
 // const options = {
-//   // rootMargin: '200px',
+//   rootMargin: '250px',
 // };
 
 // const observer = new IntersectionObserver(onEntry, options);
