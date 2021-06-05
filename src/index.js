@@ -47,6 +47,7 @@ function fetchPhotos() {
 
     if (photos.length < 12 && photos.length > 0) {
       loadMoreBtn.showEnd();
+      appendPhotosMarkup(photos);
       return;
     }
 
@@ -81,6 +82,7 @@ function scroll() {
 //       photoApiService.fetchPhotos().then(photos => {
 //         if (photos.length < 12 && photos.length >= 0) {
 //           loadMoreBtn.showEnd();
+// appendPhotosMarkup(photos);
 //           return;
 //         }
 
