@@ -69,10 +69,16 @@ function clearPhotosContainer() {
 }
 
 function scroll() {
-  loadMoreBtn.refs.button.scrollIntoView({
+  refs.sentinel.scrollIntoView({
     behavior: 'smooth',
     block: 'end',
   });
+
+  // setTimeout(() => {
+  //   window.scrollBy(0, 480);
+  // }, 500);
+
+  window.scrollBy(0, 480);
 }
 
 // Infinite-scroll
