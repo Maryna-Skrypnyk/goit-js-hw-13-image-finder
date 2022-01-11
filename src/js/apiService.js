@@ -4,7 +4,7 @@
 
 const API_KEY = '22687504-cd17fd3731d2b66e1d47a182f';
 // const cors_api_host = 'https://cors-anywhere.herokuapp.com/';
-const BASE_URL = 'https://pixabay.com/api/';
+const BASE_URL = 'https://pixabay.com/api';
 
 export default class PhotoApiService {
   constructor() {
