@@ -1,4 +1,8 @@
-const API_KEY = '21915448-ca2a23b845d7ec90c85800139';
+import dotenv from 'dotenv';
+dotenv.config();
+// require('dotenv').config();
+const API_KEY = process.env.API_KEY;
+
 // const cors_api_host = 'https://cors-anywhere.herokuapp.com/';
 const BASE_URL = 'https://pixabay.com/api';
 
